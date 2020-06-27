@@ -228,11 +228,11 @@ extension QrReader: AVCaptureVideoDataOutputSampleBufferDelegate {
     case .portrait:
       return cameraPosition == .front ? .leftTop : .rightTop
     case .landscapeLeft:
-      return cameraPosition == .front ? .bottomLeft : .topLeft
+          return cameraPosition == .front ? .topRight : .bottomRight
     case .portraitUpsideDown:
       return cameraPosition == .front ? .rightBottom : .leftBottom
     case .landscapeRight:
-      return cameraPosition == .front ? .topRight : .bottomRight
+              return cameraPosition == .front ? .bottomLeft : .topLeft
     case .faceDown, .faceUp, .unknown:
       fallthrough
     @unknown default:
