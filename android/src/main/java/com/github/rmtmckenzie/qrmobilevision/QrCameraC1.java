@@ -81,7 +81,7 @@ class QrCameraC1 implements QrCamera {
         info = new android.hardware.Camera.CameraInfo();
         for (int i = 0; i < numberOfCameras; i++) {
             android.hardware.Camera.getCameraInfo(i, info);
-            if (info.facing == android.hardware.Camera.CameraInfo.CAMERA_FACING_BACK) {
+            if (info.facing == android.hardware.Camera.CameraInfo.CAMERA_FACING_FRONT) {
                 camera = android.hardware.Camera.open(i);
                 break;
             }
