@@ -100,6 +100,11 @@ class QrCameraC2 implements QrCamera {
 
         // Return the corresponding FirebaseVisionImageMetadata rotation value.
         int result;
+
+        Log.e(TAG, "device rotation: " + deviceRotation);
+        Log.e(TAG, "device rotation comp: " + rotationCompensation);
+
+
         switch (rotationCompensation) {
             case 0:
                 result = FirebaseVisionImageMetadata.ROTATION_0;
